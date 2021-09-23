@@ -25,9 +25,11 @@ public class DefaultCityService implements CityService {
     return (cityRepository.saveAndFlush(city)).getId();
   }
 
-//  public int update(EmployeeDto employeeDto) {
-//    return 0;
-//  }
+  @Override
+  public City update(CityDto cityDto) {
+    City city = converter.toModel(cityDto);
+    return cityRepository.saveAndFlush(city);
+  }
 
   @Override
   public void delete(Long id) {
