@@ -43,14 +43,6 @@ public class Bot extends TelegramLongPollingBot {
       builder.chatId(chatId);
       messageText = update.getChannelPost().getText();
     }
-
-//    if (messageText.contains("/hello")) {
-//      builder.text("Привет");
-//      try {
-//        execute(builder.build());
-//      } catch (TelegramApiException e) {
-//      }
-//    }
   }
 
   @Override
